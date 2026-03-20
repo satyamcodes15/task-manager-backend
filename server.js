@@ -8,7 +8,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-mongoose.connect(process.env.MONGO_URI || "mongodb://127.0.0.1:27017/taskmanager")
+mongoose.connect("mongodb+srv://satyamkachhi65_db_user:DATABASEUSEBYSATYAM@cluster0.peixcxn.mongodb.net/taskmanager?retryWrites=true&w=majority")
 .then(() => console.log("MongoDB Connected"))
 .catch(err => console.log("Mongo Error:", err));
 app.get("/", (req, res) => {
